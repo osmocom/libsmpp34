@@ -9,9 +9,10 @@ sendwp_SOURCES = \
 
 sendwp_CPPFLAGS = `xml2-config --cflags`
 sendwp_LDFLAGS = `xml2-config --libs`
-sendwp_pkgdatadir = $(prefix)/bin
-sendwp_pkgdata_DATA = \
-     $(TESTAPPS_SOURCE_DIR)/sendwp.xml
+
+noinst_DATA = \
+     $(TESTAPPS_SOURCE_DIR)/sendwp.xml \
+     $(TESTAPPS_SOURCE_DIR)/esme.xml
 
 esme_SOURCES = \
     $(TESTAPPS_SOURCE_DIR)/tcp.c\
@@ -21,17 +22,12 @@ esme_SOURCES = \
 
 esme_CPPFLAGS = `xml2-config --cflags`
 esme_LDFLAGS = `xml2-config --libs`
-esme_pkgdatadir = $(prefix)/bin
-esme_pkgdata_DATA = \
-     $(TESTAPPS_SOURCE_DIR)/esme.xml
 
 analizer_SOURCES = \
     $(TESTAPPS_SOURCE_DIR)/analizer.c
 
 analizer_CPPFLAGS = 
 analizer_LDFLAGS = 
-analizer_pkgdatadir = 
-analizer_pkgdata_DATA = 
 
 smsc_CPPFLAGS = `pkg-config --cflags libosmocore`
 smsc_LDFLAGS = `pkg-config --libs libosmocore`
