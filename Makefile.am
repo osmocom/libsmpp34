@@ -6,3 +6,6 @@ EXTRA_DIST = src/Makefile.am\
              test_apps/esme.xml\
              test_apps/sendwp.xml\
              test_apps/recv_and_unpack.inc
+
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = libsmpp34.pc

@@ -33,3 +33,6 @@ analizer_LDFLAGS =
 analizer_pkgdatadir = 
 analizer_pkgdata_DATA = 
 
+smsc_CPPFLAGS = `pkg-config --cflags libosmocore`
+smsc_LDFLAGS = `pkg-config --libs libosmocore`
+smsc_SOURCES = $(TESTAPPS_SOURCE_DIR)/smpp_smsc.c $(TESTAPPS_SOURCE_DIR)/smsc_main.c
