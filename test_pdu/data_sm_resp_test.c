@@ -26,9 +26,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <netinet/in.h>
-#ifdef __linux__
 #include <stdint.h>
-#endif
 
 #include "smpp34.h"
 #include "smpp34_structs.h"

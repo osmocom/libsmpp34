@@ -31,9 +31,7 @@
 #include <libxml/xmlmemory.h>
 #include <libxml/parser.h>
 
-#ifdef __linux__
 #include <stdint.h>
-#endif
 
 #include "smpp34.h"
 #include "smpp34_structs.h"

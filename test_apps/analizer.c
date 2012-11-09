@@ -27,10 +27,7 @@
 #include <string.h>
 #include <arpa/inet.h>
 
-
-#ifdef __linux__
 #include <stdint.h>
-#endif
 
 #include "smpp34.h"
 #include "smpp34_structs.h"

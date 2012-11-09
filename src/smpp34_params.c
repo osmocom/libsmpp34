@@ -23,9 +23,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#ifdef __linux__
 #include <stdint.h>
-#endif
 
 #include "smpp34.h"
 #include "smpp34_structs.h"
