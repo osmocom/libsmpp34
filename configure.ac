@@ -17,7 +17,7 @@ AC_PROG_INSTALL
 
 # Checks for header files.
 AC_HEADER_STDC
-AC_CHECK_HEADERS([malloc.h netinet/in.h stdint.h string.h])
+AC_CHECK_HEADERS([stdlib.h netinet/in.h stdint.h string.h])
 
 found_libxml2=yes
 PKG_CHECK_MODULES(LIBXML2, libxml-2.0, , found_libxml2=no)
