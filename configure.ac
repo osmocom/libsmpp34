@@ -19,6 +19,10 @@ AC_PROG_INSTALL
 AC_HEADER_STDC
 AC_CHECK_HEADERS([malloc.h netinet/in.h stdint.h string.h])
 
+found_libxml2=yes
+PKG_CHECK_MODULES(LIBXML2, libxml-2.0, , found_libxml2=no)
+AM_CONDITIONAL(HAVE_LIBXML2, test "$found_libxml2" = yes)
+
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
