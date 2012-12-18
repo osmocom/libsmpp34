@@ -1,4 +1,9 @@
 SUBDIRS = binary def_frame def_list
+
+if HAVE_LIBXML2
+SUBDIRS += test_apps
+endif
+
 EXTRA_DIST = src/Makefile.am\
              test_pdu/Makefile.am\
              test_apps/Makefile.am \
