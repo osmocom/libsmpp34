@@ -32,4 +32,5 @@ AC_OUTPUT([Makefile
            def_frame/Makefile
            def_list/Makefile
            binary/Makefile
+           test_apps/Makefile
 	   libsmpp34.pc])
