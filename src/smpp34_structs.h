@@ -256,6 +256,6 @@ int smpp34_dumpPdu2(uint8_t *dest, int size_dest, void* tt);
 int smpp34_pack(uint32_t type,uint8_t *ptrBuf,int ptrSize,int *ptrLen,void* tt);
 int smpp34_pack2(uint8_t *ptrBuf,int ptrSize,int *ptrLen,void* tt);
 
-int smpp34_unpack(uint32_t type, void* tt, uint8_t *ptrBuf, int ptrLen);
-int smpp34_unpack2(void* tt, uint8_t *ptrBuf, int ptrLen);
+int smpp34_unpack(uint32_t type, void* tt, const uint8_t *ptrBuf, int ptrLen);
+int smpp34_unpack2(void* tt, const uint8_t *ptrBuf, int ptrLen);
 #endif /* _STB_H_ */

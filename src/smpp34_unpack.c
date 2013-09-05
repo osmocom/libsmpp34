@@ -40,12 +40,12 @@ extern char *ptrerror;
 
 /* FUNCTIONS ******************************************************************/
 int 
-smpp34_unpack(uint32_t type, void* tt, uint8_t *ptrBuf, int ptrLen)
+smpp34_unpack(uint32_t type, void* tt, const uint8_t *ptrBuf, int ptrLen)
 {
 
     char dummy_b[SMALL_BUFF];
-    uint8_t *ini      = ptrBuf;
-    uint8_t *aux      = ptrBuf;
+    const uint8_t *ini      = ptrBuf;
+    const uint8_t *aux      = ptrBuf;
     int lenval = 0;
     int left = ptrLen;
     int lefterror = 0;
@@ -243,7 +243,7 @@ smpp34_unpack(uint32_t type, void* tt, uint8_t *ptrBuf, int ptrLen)
 };
 
 int 
-smpp34_unpack2(void* tt, uint8_t *ptrBuf, int ptrLen)
+smpp34_unpack2(void* tt, const uint8_t *ptrBuf, int ptrLen)
 {
     uint32_t cmdid;
     uint32_t tempo;
