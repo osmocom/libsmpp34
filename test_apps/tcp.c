@@ -31,6 +31,8 @@
 #include <libxml/xmlmemory.h>
 #include <libxml/parser.h>
 
+#include <netinet/in.h>
+
 #include "esme.h"
 
 int do_tcp_connect( xmlNodePtr p, int *s )
@@ -38,7 +40,7 @@ int do_tcp_connect( xmlNodePtr p, int *s )
     int ret = 0;
     int n = 1;
     struct hostent _host;
-#ifdef __linux__
+#if defined(__linux__) || defined(__FreeBSD__)
     struct hostent *__host_result;
 #endif
     struct in_addr addr;
@@ -61,7 +63,7 @@ int do_tcp_connect( xmlNodePtr p, int *s )
         ret = -1; goto lb_tcp_connect_end;
     };
 
-#ifdef __linux__
+#if defined(__linux__) || defined(__FreeBSD__)
     if( gethostbyname_r(h,&_host,ahost,sizeof(ahost),&__host_result,&n) != 0)
 #else /* solaris */
     if( gethostbyname_r(h,&_host,ahost,sizeof(ahost),&n) == NULL)
