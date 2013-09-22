@@ -1,0 +1,33 @@
+Source: libsmpp34
+Section: libs
+Priority: optional
+Maintainer: Holger Freyther <holger@moiji-mobile.com>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev, autoconf, automake, libtool, dh-autoreconf, libdpkg-perl, git, libxml2-dev, pkg-config
+Standards-Version: 3.9.3
+Homepage: http://bb.osmocom.org/trac/wiki/libosmocore
+Vcs-Git: git://git.osmocom.org/libosmocore.git
+Vcs-Browser: http://git.osmocom.org/gitweb?p=libosmocore.git;a=summary
+
+Package: libsmpp0
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}
+Description: libsmpp34 codec library
+
+Package: libsmpp34-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}
+Description: Development headers libsmpp34 codec library
+
+Package: libsmpp34-utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Utilities for SMPP
+
+Package: libsmpp34-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: libsmpp0 (= ${binary:Version}), ${misc:Depends}
+Description: Debug symbols for libsmpp34
