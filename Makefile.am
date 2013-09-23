@@ -1,4 +1,4 @@
-SUBDIRS = binary def_frame def_list
+SUBDIRS = binaries def_frame def_list
 
 if HAVE_LIBXML2
 SUBDIRS += test_apps

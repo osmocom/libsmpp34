@@ -31,6 +31,6 @@ AC_CHECK_FUNCS([memset])
 AC_OUTPUT([Makefile
            def_frame/Makefile
            def_list/Makefile
-           binary/Makefile
+           binaries/Makefile
            test_apps/Makefile
 	   libsmpp34.pc])
