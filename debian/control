@@ -17,7 +17,7 @@ Description: libsmpp34 codec library
 Package: libsmpp34-dev
 Section: libdevel
 Architecture: any
-Depends: ${misc:Depends}
+Depends: libsmpp0 (= ${binary:Version}), ${misc:Depends}
 Description: Development headers libsmpp34 codec library
 
 Package: libsmpp34-utils
