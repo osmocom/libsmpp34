@@ -12,6 +12,6 @@ include $(top_srcdir)/src/Makefile.am
 LDADD = $(top_builddir)/binaries/libsmpp34.la
 AM_CPPFLAGS = -D_REENTRANT -DBSD_COMP -D_POSIX_PTHREAD_SEMANTICS
 AM_CFLAGS = @CFLAGS@ -Wall -fPIC # -static
-INCLUDES = -I../src -I..
+INCLUDES = -I$(top_srcdir)/src -I$(top_srcdir)
 AM_LDFLAGS = -lrt -lpthread
 OBJ_EXTRA_DIST = $(esme_EXTRA_DIST)
