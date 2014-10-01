@@ -24,6 +24,8 @@
 
 #include <sys/types.h>
 #include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 #include <netdb.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -46,13 +48,15 @@ int do_tcp_connect( xmlNodePtr p, int *s )
     struct in_addr addr;
     struct sockaddr_in name;
 
-    char h[256];
+    char h[256], local_src[256];
     char ahost[1024];
-    int port = 0;
+    int port = 0, local_port = 0;
 
 
     GET_PROP_STR(h, p, "host");
     GET_PROP_INT(port, p, "port");
+    GET_PROP_STR(local_src, p, "src_addr");
+    GET_PROP_INT(local_port, p, "src_port");
 
     if((*s = socket(AF_INET, SOCK_STREAM, 0)) == -1){
         printf("Error in socket()\n");
@@ -62,6 +66,19 @@ int do_tcp_connect( xmlNodePtr p, int *s )
         printf("Error in setsockopt().\n");
         ret = -1; goto lb_tcp_connect_end;
     };
+
+    /* bind to a local addr */
+    if (strlen(local_src) != 0) {
+        struct sockaddr_in name;
+        name.sin_family = AF_INET;
+        name.sin_port = htons(local_port);
+        name.sin_addr.s_addr = inet_addr(local_src);
+
+        if ( bind(*s, (struct sockaddr *) &name, sizeof(name)) < 0){
+            printf("Error in bind().\n");
+            ret = -1; goto lb_tcp_connect_end;
+        }
+    }
 
 #if defined(__linux__) || defined(__FreeBSD__)
     if( gethostbyname_r(h,&_host,ahost,sizeof(ahost),&__host_result,&n) != 0)
