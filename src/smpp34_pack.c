@@ -63,7 +63,7 @@ smpp34_pack(uint32_t type, uint8_t *ptrBuf, int ptrSize, int *ptrLen, void* tt)
     lenval = sizeof(uint32_t);\
     if( lenval >= left ){\
         PUTLOG("[%s:%08X(%s)]", par, inst par,\
-                                      "Value lenght exceed buffer lenght");\
+                                      "Value length exceed buffer length");\
         return( -1 );\
     };\
     _str(inst par,dummy_b);\
@@ -81,7 +81,7 @@ smpp34_pack(uint32_t type, uint8_t *ptrBuf, int ptrSize, int *ptrLen, void* tt)
     lenval = sizeof(uint16_t);\
     if( lenval >= left ){\
         PUTLOG("[%s:%04X(%s)]", par, inst par,\
-                                      "Value lenght exceed buffer lenght");\
+                                      "Value length exceed buffer length");\
         return( -1 );\
     };\
     _str(inst par,dummy_b);\
@@ -98,7 +98,7 @@ smpp34_pack(uint32_t type, uint8_t *ptrBuf, int ptrSize, int *ptrLen, void* tt)
     lenval = sizeof(uint8_t);\
     if( lenval >= left ){\
         PUTLOG("[%s:%02X(%s)]", par, inst par,\
-                                      "Value lenght exceed buffer lenght");\
+                                      "Value length exceed buffer length");\
         return( -1 );\
     };\
     _str(inst par,dummy_b);\
@@ -123,7 +123,7 @@ smpp34_pack(uint32_t type, uint8_t *ptrBuf, int ptrSize, int *ptrLen, void* tt)
     lenval = strlen((char*)inst par) + 1;\
     if( lenval > left ){\
         PUTLOG("[len(%s):%d(%s)]", par, lenval, \
-                                      "Value lenght exceed buffer lenght");\
+                                      "Value length exceed buffer length");\
         return( -1 );\
     };\
     if( lenval > sizeval ){\
@@ -143,7 +143,7 @@ smpp34_pack(uint32_t type, uint8_t *ptrBuf, int ptrSize, int *ptrLen, void* tt)
     lenval = *((inst par) - 1);\
     if( lenval >= left ){\
         PUTLOG("[leng %s:%d(%s)]", par, lenval,\
-                                      "Value lenght exceed buffer lenght");\
+                                      "Value length exceed buffer length");\
         return( -1 );\
     };\
     if( lenval >= sizeval ){\
@@ -162,7 +162,7 @@ smpp34_pack(uint32_t type, uint8_t *ptrBuf, int ptrSize, int *ptrLen, void* tt)
     memcpy(&l_lenval, ((inst par) - sizeof(uint16_t)), sizeof(uint16_t));\
     if( l_lenval >= left ){\
         PUTLOG("[leng %s:%d(%s)]", par, l_lenval,\
-                                      "Value lenght exceed buffer lenght");\
+                                      "Value length exceed buffer length");\
         return( -1 );\
     };\
     if( l_lenval > sizeval ){\

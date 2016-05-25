@@ -3,7 +3,7 @@
     /* Read from socket (This is a sample, must be more complex) **********/
     ret = recv(sock_tcp, local_buffer, 4, MSG_PEEK); 
     if( ret != 4 ){ printf("Error in recv(PEEK)\n");return( -1 );};
-    memcpy(&tempo, local_buffer, sizeof(uint32_t)); /* get lenght PDU */
+    memcpy(&tempo, local_buffer, sizeof(uint32_t)); /* get length PDU */
     local_buffer_len = ntohl( tempo );
     ret = recv(sock_tcp, local_buffer, local_buffer_len, 0); 
     if( ret != local_buffer_len ){ 

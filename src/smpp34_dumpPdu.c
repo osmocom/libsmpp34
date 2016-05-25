@@ -68,7 +68,7 @@ smpp34_dumpPdu(uint32_t type, uint8_t *dest, int size_dest, void* tt)
                                                     #par,inst par,dummy_b);\
     if( lenval >= left ){\
         PUTLOG("[%s:%08X(%s)]", par, inst par,\
-                                      "Value lenght exceed buffer lenght");\
+                                      "Value length exceed buffer length");\
         return( -1 );\
     };\
     snprintf((char*)dest, left, "%s", l_dest);\
@@ -86,7 +86,7 @@ smpp34_dumpPdu(uint32_t type, uint8_t *dest, int size_dest, void* tt)
                                "%-30s[%04X] [%s]\n",#par,inst par,dummy_b);\
     if( lenval >= left ){\
         PUTLOG("[%s:%04X(%s)]", par, inst par,\
-                                      "Value lenght exceed buffer lenght");\
+                                      "Value length exceed buffer length");\
         return( -1 );\
     };\
     snprintf((char*)dest, left, "%s", l_dest);\
@@ -104,7 +104,7 @@ smpp34_dumpPdu(uint32_t type, uint8_t *dest, int size_dest, void* tt)
                                                       #par,inst par, dummy_b);\
     if( lenval >= left ){\
         PUTLOG("[%s:%02X(%s)]", par, inst par,\
-                                      "Value lenght exceed buffer lenght");\
+                                      "Value length exceed buffer length");\
         return( -1 );\
     };\
     snprintf((char*)dest, left, "%s", l_dest);\
@@ -116,7 +116,7 @@ smpp34_dumpPdu(uint32_t type, uint8_t *dest, int size_dest, void* tt)
                                                            #par, inst par);\
     if( lenval >= left ){\
         PUTLOG("[%s:%s(%s)]", par, inst par, \
-                                     "Value lenght exceed buffer lenght");\
+                                     "Value length exceed buffer length");\
         return( -1 );\
     };\
     PUTLOG("[%s:%s(%s)]", par, inst par, "OK");\
@@ -143,7 +143,7 @@ smpp34_dumpPdu(uint32_t type, uint8_t *dest, int size_dest, void* tt)
     lenval = *((inst par) - 1);\
     if( (lenval + 33) >= left ){\
         PUTLOG("[%s:%s(%s)]", par, inst par, \
-                                     "Value lenght exceed buffer lenght");\
+                                     "Value length exceed buffer length");\
         return( -1 );\
     };\
     PUTLOG("[%s:%s(%s)]", par, "<bin>", "OK");\
@@ -170,7 +170,7 @@ smpp34_dumpPdu(uint32_t type, uint8_t *dest, int size_dest, void* tt)
     memcpy(&l_lenval, ((inst par) - sizeof(uint16_t)), sizeof(uint16_t));\
     if( (l_lenval + 33) >= left ){\
         PUTLOG("[%s:%s(%s)]", par, inst par, \
-                                     "Value lenght exceed buffer lenght");\
+                                     "Value length exceed buffer length");\
         return( -1 );\
     };\
     PUTLOG("[%s:%s(%s)]", par, "<bin>", "OK");\
