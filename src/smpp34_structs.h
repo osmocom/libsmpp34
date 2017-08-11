@@ -86,6 +86,9 @@ typedef struct alert_notification_t alert_notification_t;
     OCTET16( inst, octet, size        ); \
 } par;
 
+#define smpp34_tlv_for_each(pos, head)	\
+	for (pos = (head); pos != NULL; pos = pos->next)
+
 #define DAD( inst, par, do_dest_address ) dad_t *par;
 #define UU2( inst, par, size ) union { \
     struct { \
