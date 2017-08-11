@@ -212,4 +212,8 @@
 #define SMPP34_UDHI_IND			0x40
 #define SMPP34_REPLY_PATH		0x80
 
+/* Sect. 5.2.17 registered_delivery. */
+#define SMPP34_DELIVERY_RECEIPT_OFF	0x00
+#define SMPP34_DELIVERY_RECEIPT_ON	0x01
+
 #endif
