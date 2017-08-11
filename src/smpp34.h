@@ -204,4 +204,12 @@
 #define TLVID_its_reply_type              0x1380 /* CDMA */
 #define TLVID_its_session_info            0x1383 /* CDMA */
 
+/* As defined by SMPP 3.4, Sect. 5.2.12 Parameter Definition esm_class. */
+#define SMPP34_DATAGRAM_MODE		0x01
+#define SMPP34_MSG_MODE_MASK		0x03
+#define SMPP34_DELIVERY_RECEIPT		0x04
+#define SMPP34_DELIVERY_ACK		0x08
+#define SMPP34_UDHI_IND			0x40
+#define SMPP34_REPLY_PATH		0x80
+
 #endif
