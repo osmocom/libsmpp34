@@ -2,7 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.57)
-AC_INIT(libsmpp34, 1.10, ultraismo@yahoo.com)
+AC_INIT(libsmpp34, m4_esyscmd([./git-version-gen .tarball-version]), ultraismo@yahoo.com)
+
 AC_CONFIG_AUX_DIR(aux_config)
 AM_INIT_AUTOMAKE([foreign])
 AM_CONFIG_HEADER([aux_config/config.h])

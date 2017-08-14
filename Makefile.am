@@ -4,6 +4,12 @@ if HAVE_LIBXML2
 SUBDIRS += test_apps
 endif
 
+BUILT_SOURCES = $(top_srcdir)/.version
+$(top_srcdir)/.version:
+	echo $(VERSION) > $@-t && mv $@-t $@
+dist-hook:
+	echo $(VERSION) > $(distdir)/.tarball-version
+
 EXTRA_DIST = src/Makefile.am\
              test_pdu/Makefile.am\
              test_apps/Makefile.am \
