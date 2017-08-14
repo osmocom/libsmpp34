@@ -1,8 +1,15 @@
-libsmpp34 (1.11) UNRELEASED; urgency=medium
+libsmpp34 (1.12) UNRELEASED; urgency=medium
 
+  [ Holger Hans Peter Freyther ]
   * Move forward towards a new release.
 
- -- Holger Hans Peter Freyther <holger@moiji-mobile.com>  Tue, 24 May 2016 23:07:49 +0200
+  [ Harald Welte ]
+  * it's been four years with various cleanups
+  * SMPP_DELIVERY_RECEIPT_* constants
+  * SMPP ESM class parameter definitions
+  * smpp34_tlv_for_each() helper macro
+
+ -- Harald Welte <laforge@nataraja.de.gnumonks.org>  Mon, 14 Aug 2017 19:08:37 +0200
 
 libsmpp34 (1.10z1) stable; urgency=low
 
