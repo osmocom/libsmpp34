@@ -12,3 +12,10 @@ config.log
 config.status
 libsmpp34.pc
 libtool
+.version
+.tarball-version
+debian/.debhelper
+debian/autoreconf*
+debian/tmp
+debian/*.log
+debian/*.substvars
