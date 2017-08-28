@@ -19,5 +19,7 @@ EXTRA_DIST = src/Makefile.am\
              test_apps/recv_and_unpack.inc \
              README.md
 
+@RELMAKE@
+
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = libsmpp34.pc
