@@ -136,11 +136,10 @@ smpp34_dumpPdu(uint32_t type, uint8_t *dest, int size_dest, void* tt)
     _op(inst, par, size )\
 }
 
-#define OCTET8( inst, par, size ){\
+#define OCTET8( inst, par, size, lenval ){\
     int i = 0;\
     uint8_t *p = l_dest;\
     int dummy = 0;\
-    lenval = *((inst par) - 1);\
     if( (lenval + 33) >= left ){\
         PUTLOG("[%s:%s(%s)]", par, inst par, \
                                      "Value length exceed buffer length");\

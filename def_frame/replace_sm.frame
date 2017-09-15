@@ -7,4 +7,4 @@ C_OCTET( instancia, validity_period, 17 );
     U08( instancia, registered_delivery, valueDec_08 );
     U08( instancia, sm_default_msg_id, valueDec_08 );
     U08( instancia, sm_length, valueDec_08 );
- OCTET8( instancia, short_message, 254 );
+ OCTET8( instancia, short_message, 254, instancia sm_length );

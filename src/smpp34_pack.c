@@ -139,8 +139,7 @@ smpp34_pack(uint32_t type, uint8_t *ptrBuf, int ptrSize, int *ptrLen, void* tt)
     }\
 };
 
-#define OCTET8( inst, par, sizeval ){\
-    lenval = *((inst par) - 1);\
+#define OCTET8( inst, par, sizeval, lenval ){\
     if( lenval >= left ){\
         PUTLOG("[leng %s:%d(%s)]", par, lenval,\
                                       "Value length exceed buffer length");\

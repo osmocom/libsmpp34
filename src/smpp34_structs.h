@@ -75,7 +75,7 @@ typedef struct alert_notification_t alert_notification_t;
 
 #define O_C_OCTET( inst, par, size ) uint8_t par[ size ];
 #define C_OCTET( inst, par, size ) uint8_t par[ size ];
-#define OCTET8( inst, par, size ) uint8_t par[ size ];
+#define OCTET8( inst, par, size, lenval ) uint8_t par[ size ];
 #define OCTET16( inst, par, size ) uint8_t par[ size ];
 
 #define TLV( inst, par, do_tlv ) tlv_t *par;
