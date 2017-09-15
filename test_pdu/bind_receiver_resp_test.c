@@ -52,7 +52,7 @@ main( int argc, char *argv[] )
     b.command_id       = BIND_RECEIVER_RESP;
     b.command_status   = ESME_ROK;
     b.sequence_number  = 1;
-    snprintf((char*)b.system_id, sizeof(b.system_id), "%s", "1234567890123456");
+    snprintf((char*)b.system_id, sizeof(b.system_id), "%s", "123456789012345");
 
     tlv.tag = TLVID_sc_interface_version;
     tlv.length = sizeof(uint8_t);
