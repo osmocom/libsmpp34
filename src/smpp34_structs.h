@@ -23,7 +23,7 @@
 #ifndef _STB_H_
 #define _STB_H_
 
-#define SMALL_BUFF      30
+#define SMALL_BUFF      34
 /* Identify PDUs ident ********************************************************/
 #define MAX_TLV_SIZE         1024
 #define MAX_DAD_SIZE         21
