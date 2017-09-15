@@ -229,9 +229,7 @@ smpp34_unpack(uint32_t type, void* tt, const uint8_t *ptrBuf, int ptrLen)
 
     { /* Hace algunas Verificaciones **************************************/
         uint32_t len_orig;
-        uint32_t l;
         memcpy(&len_orig, tt, sizeof(uint32_t));
-        l = ntohl( len_orig );
         if( len_orig != (aux - ini) ){
             PUTLOG("[%s:(Error in PDU length %d!=%d)]",PDU,len_orig,(uint32_t)(aux-ini));
             return( -1 );
