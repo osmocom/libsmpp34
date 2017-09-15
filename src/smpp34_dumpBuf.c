@@ -49,14 +49,12 @@ smpp34_dumpBuf(uint8_t *dest, int destL, uint8_t *src, int srcL)
     int size;
     uint8_t ind = 3;
     uint8_t *buffer = NULL;
-    int lefterror = 0;
 
     size   = srcL;
     buffer = src;
 
     memset(smpp34_strerror, 0, sizeof(smpp34_strerror));
     ptrerror = smpp34_strerror;
-    lefterror = sizeof(smpp34_strerror);
 
     /* dump buffer character by character until size is reached */
     for(i = 0; i < size; i++){
