@@ -5,19 +5,19 @@
  *
  * This file is part of libsmpp34 (c-open-smpp3.4 library).
  *
- * The libsmpp34 library is free software; you can redistribute it and/or 
- * modify it under the terms of the GNU Lesser General Public License as 
- * published by the Free Software Foundation; either version 2.1 of the 
+ * The libsmpp34 library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of the
  * License, or (at your option) any later version.
  *
- * This library is distributed in the hope that it will be useful, but 
- * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
- * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public 
+ * This library is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public
  * License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public License 
- * along with this library; if not, write to the Free Software Foundation, 
- * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this library; if not, write to the Free Software Foundation,
+ * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  *
  */
 #ifndef _STB_H_
@@ -37,35 +37,35 @@ extern int  smpp34_errno;
 extern char smpp34_strerror[2048];
 
 /* Define structures **********************************************************/
-typedef struct tlv_t tlv_t; 
-typedef struct dad_t dad_t; 
-typedef struct udad_t udad_t; 
-typedef struct bind_transmitter_t bind_transmitter_t; 
-typedef struct bind_transmitter_resp_t bind_transmitter_resp_t; 
-typedef struct bind_receiver_t bind_receiver_t; 
-typedef struct bind_receiver_resp_t bind_receiver_resp_t; 
-typedef struct bind_transceiver_t bind_transceiver_t; 
-typedef struct bind_transceiver_resp_t bind_transceiver_resp_t; 
-typedef struct outbind_t outbind_t; 
-typedef struct unbind_t unbind_t; 
-typedef struct unbind_resp_t unbind_resp_t; 
-typedef struct generic_nack_t generic_nack_t; 
-typedef struct submit_sm_t submit_sm_t; 
-typedef struct submit_sm_resp_t submit_sm_resp_t; 
-typedef struct submit_multi_t submit_multi_t; 
-typedef struct submit_multi_resp_t submit_multi_resp_t; 
-typedef struct deliver_sm_t deliver_sm_t; 
-typedef struct deliver_sm_resp_t deliver_sm_resp_t; 
-typedef struct data_sm_t data_sm_t; 
-typedef struct data_sm_resp_t data_sm_resp_t; 
-typedef struct query_sm_t query_sm_t; 
-typedef struct query_sm_resp_t query_sm_resp_t; 
-typedef struct cancel_sm_t cancel_sm_t; 
-typedef struct cancel_sm_resp_t cancel_sm_resp_t; 
-typedef struct replace_sm_t replace_sm_t; 
-typedef struct replace_sm_resp_t replace_sm_resp_t; 
-typedef struct enquire_link_t enquire_link_t; 
-typedef struct alert_notification_t alert_notification_t; 
+typedef struct tlv_t tlv_t;
+typedef struct dad_t dad_t;
+typedef struct udad_t udad_t;
+typedef struct bind_transmitter_t bind_transmitter_t;
+typedef struct bind_transmitter_resp_t bind_transmitter_resp_t;
+typedef struct bind_receiver_t bind_receiver_t;
+typedef struct bind_receiver_resp_t bind_receiver_resp_t;
+typedef struct bind_transceiver_t bind_transceiver_t;
+typedef struct bind_transceiver_resp_t bind_transceiver_resp_t;
+typedef struct outbind_t outbind_t;
+typedef struct unbind_t unbind_t;
+typedef struct unbind_resp_t unbind_resp_t;
+typedef struct generic_nack_t generic_nack_t;
+typedef struct submit_sm_t submit_sm_t;
+typedef struct submit_sm_resp_t submit_sm_resp_t;
+typedef struct submit_multi_t submit_multi_t;
+typedef struct submit_multi_resp_t submit_multi_resp_t;
+typedef struct deliver_sm_t deliver_sm_t;
+typedef struct deliver_sm_resp_t deliver_sm_resp_t;
+typedef struct data_sm_t data_sm_t;
+typedef struct data_sm_resp_t data_sm_resp_t;
+typedef struct query_sm_t query_sm_t;
+typedef struct query_sm_resp_t query_sm_resp_t;
+typedef struct cancel_sm_t cancel_sm_t;
+typedef struct cancel_sm_resp_t cancel_sm_resp_t;
+typedef struct replace_sm_t replace_sm_t;
+typedef struct replace_sm_resp_t replace_sm_resp_t;
+typedef struct enquire_link_t enquire_link_t;
+typedef struct alert_notification_t alert_notification_t;
 
 /* TYPEDEFs structs ***********************************************************/
 #define instancia 0
@@ -232,7 +232,7 @@ struct enquire_link_t {
     #include "def_frame/header.frame"
 };
 
-typedef struct enquire_link_resp_t enquire_link_resp_t; 
+typedef struct enquire_link_resp_t enquire_link_resp_t;
 struct enquire_link_resp_t {
     #include "def_frame/header.frame"
 };
