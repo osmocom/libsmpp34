@@ -17,7 +17,8 @@ EXTRA_DIST = src/Makefile.am\
              test_apps/esme.xml\
              test_apps/sendwp.xml\
              test_apps/recv_and_unpack.inc \
-             README.md
+             README.md \
+             .version
 
 @RELMAKE@
 
