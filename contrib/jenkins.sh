@@ -6,8 +6,8 @@ set -ex
 osmo-clean-workspace.sh
 
 autoreconf --install --force
-./configure --enable-sanitize
-$MAKE CFLAGS="-Werror" CPPFLAGS="-Werror"
+./configure --enable-sanitize --enable-werror
+$MAKE
 $MAKE $PARALLEL_MAKE
 $MAKE distcheck || cat-testlogs.sh
 
