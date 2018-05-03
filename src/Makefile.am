@@ -1,3 +1,6 @@
+# This is _NOT_ the library release version, it's an API version.
+# Please read Chapter 6 "Library interface versions" of the libtool documentation before making any modification
+LIBVERSION=0:1:0
 
 # src/Makefile.am #
 lib_LTLIBRARIES = libsmpp34.la
@@ -22,7 +25,5 @@ include_HEADERS = \
 libsmpp34_la_CFLAGS = @CFLAGS@ -Wall
 libsmpp34_la_CFLAGS += -D_REENTRANT -DBSD_COMP -D_POSIX_PTHREAD_SEMANTICS
 libsmpp34_la_INCLUDES = -I. -I..
-libsmpp34_la_LDFLAGS = @LDFLAGS@ -version-info 0:1:0
+libsmpp34_la_LDFLAGS = @LDFLAGS@ -version-info $(LIBVERSION) -no-undefined
 libsmpp34_la_LDFLAGS += -lrt -lpthread
-
-
