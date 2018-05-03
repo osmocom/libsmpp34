@@ -1,4 +1,4 @@
-libsmpp34 (1.12.0) UNRELEASED; urgency=medium
+libsmpp34 (1.13.0) unstable; urgency=medium
 
   [ Holger Hans Peter Freyther ]
   * Move forward towards a new release.
@@ -8,8 +8,38 @@ libsmpp34 (1.12.0) UNRELEASED; urgency=medium
   * SMPP_DELIVERY_RECEIPT_* constants
   * SMPP ESM class parameter definitions
   * smpp34_tlv_for_each() helper macro
+  * Fix 'make distcheck' by adding .version to EXTRA_DISTI
+  * debian/control: Fix Vcs-{Browser,Git} URLs
 
- -- Harald Welte <laforge@nataraja.de.gnumonks.org>  Mon, 14 Aug 2017 19:08:37 +0200
+  [ Max ]
+  * Use release helper from libosmocore
+  * Enable sanitize for CI tests
+
+  [ Pau Espin Pedrol ]
+  * smpp34_dumpBuf.c: remove unused variable
+  * smpp34_structs.h: Fix trailing whitespace
+  * smpp34_structs.h: Fix truncated output in str_tlv_id
+  * smpp34_unpack.c: remove unused variable
+  * bind_receiver_resp_test.c: Fix compilation warning
+  * Fix Out of bounds compilation warning in OCTET8
+  * contrib: Enable -Werror by default
+  * src/Makefile.am: Use LIBVERSION variable to set version-info
+
+  [ Alexander Couzens ]
+  * debian/rules: show testsuite.log when tests are failing
+
+  [ Neels Hofmeyr ]
+  * jenkins: use osmo-clean-workspace.sh before and after build
+  * add --enable-sanitize config option
+  * configure: add --enable-werror
+  * jenkins.sh: use --enable-werror configure flag, not CFLAGS
+
+  [ Martin Hauke ]
+  * binaries/Makefile.am: Fix parallel build issue
+  * jenkins: Enable parallel build and distcheck
+  * jenkins.sh: output all test logs when 'make check' failed
+
+ -- Pau Espin Pedrol <pespin@sysmocom.de>  Thu, 03 May 2018 18:04:10 +0200
 
 libsmpp34 (1.10z1) stable; urgency=low
 
