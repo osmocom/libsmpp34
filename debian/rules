@@ -14,10 +14,6 @@ VERSION := $(shell echo '$(DEBVERS)' | sed -e 's/[+-].*//' -e 's/~//g')
 override_dh_strip:
 	dh_strip --dbg-package=libsmpp34-dbg
 
-override_dh_autoreconf:
-	echo $(VERSION) > .tarball-version
-	dh_autoreconf
-
 # Print test results in case of a failure
 override_dh_auto_test:
 	dh_auto_test || (find . -name testsuite.log -exec cat {} \; ; false)
