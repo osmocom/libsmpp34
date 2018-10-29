@@ -56,6 +56,7 @@ int main( int argc, char **argv )
             break;
         default:
             printf("Error: unrecognized option\n");
+            /* fall thru */
         case 'h':
             printf("usage: %s %s\n", argv[0], HELP_FORMAT);
             return( -1 );
