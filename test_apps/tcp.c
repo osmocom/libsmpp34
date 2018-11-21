@@ -69,7 +69,7 @@ int do_tcp_connect( xmlNodePtr p, int *s )
 
     /* bind to a local addr */
     if (strlen(local_src) != 0) {
-        struct sockaddr_in name;
+        memset(&name, 0, sizeof(name));
         name.sin_family = AF_INET;
         name.sin_port = htons(local_port);
         name.sin_addr.s_addr = inet_addr(local_src);
@@ -91,6 +91,7 @@ int do_tcp_connect( xmlNodePtr p, int *s )
     };
 
     memcpy(&addr.s_addr, _host.h_addr_list[0], sizeof(struct in_addr));
+    memset(&name, 0, sizeof(name));
     name.sin_family = AF_INET;
     name.sin_port = htons( port );
     name.sin_addr = addr;
