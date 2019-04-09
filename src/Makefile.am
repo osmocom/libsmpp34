@@ -10,6 +10,7 @@ libsmpp34_la_SOURCES = \
     $(LIBRARY_SOURCE_DIR)/smpp34.h \
     $(LIBRARY_SOURCE_DIR)/smpp34_dumpBuf.c \
     $(LIBRARY_SOURCE_DIR)/smpp34_dumpPdu.c \
+    $(LIBRARY_SOURCE_DIR)/smpp34_heap.c \
     $(LIBRARY_SOURCE_DIR)/smpp34_pack.c \
     $(LIBRARY_SOURCE_DIR)/smpp34_unpack.c \
     $(LIBRARY_SOURCE_DIR)/smpp34_structs.c \
@@ -19,6 +20,7 @@ libsmpp34_la_SOURCES = \
 
 include_HEADERS = \
     $(LIBRARY_SOURCE_DIR)/smpp34.h \
+    $(LIBRARY_SOURCE_DIR)/smpp34_heap.h \
     $(LIBRARY_SOURCE_DIR)/smpp34_structs.h \
     $(LIBRARY_SOURCE_DIR)/smpp34_params.h
 

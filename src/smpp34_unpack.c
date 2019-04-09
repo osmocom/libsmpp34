@@ -31,6 +31,7 @@
 #include "smpp34.h"
 #include "smpp34_structs.h"
 #include "smpp34_params.h"
+#include "smpp34_heap.h"
 
 /* GLOBALS ********************************************************************/
 /* EXTERN *********************************************************************/
@@ -179,7 +180,7 @@ smpp34_unpack(uint32_t type, void* tt, const uint8_t *ptrBuf, int ptrLen)
 #define TLV( inst, tlv3, do_tlv ){\
     tlv_t *aux_tlv = NULL;\
     while( (aux - ini) < t1->command_length ){\
-        aux_tlv = (tlv_t *) malloc(sizeof( tlv_t ));\
+        aux_tlv = (tlv_t *) smpp34_malloc(sizeof( tlv_t ));\
         memset(aux_tlv, 0, sizeof(tlv_t));\
         do_tlv( aux_tlv );\
         aux_tlv->next = inst tlv3;\
@@ -191,7 +192,7 @@ smpp34_unpack(uint32_t type, void* tt, const uint8_t *ptrBuf, int ptrLen)
     udad_t *aux_udad = NULL;\
     int c = 0;\
     while( c < t1->no_unsuccess ){\
-        aux_udad = (udad_t *) malloc(sizeof( udad_t ));\
+        aux_udad = (udad_t *) smpp34_malloc(sizeof( udad_t ));\
         memset(aux_udad, 0, sizeof(udad_t));\
         do_udad( aux_udad );\
         aux_udad->next = inst udad3;\
@@ -204,7 +205,7 @@ smpp34_unpack(uint32_t type, void* tt, const uint8_t *ptrBuf, int ptrLen)
     dad_t *aux_dad = NULL;\
     int c = 0;\
     while( c < t1->number_of_dests ){\
-        aux_dad = (dad_t *) malloc(sizeof( dad_t ));\
+        aux_dad = (dad_t *) smpp34_malloc(sizeof( dad_t ));\
         memset(aux_dad, 0, sizeof(dad_t));\
         do_dad( aux_dad );\
         aux_dad->next = inst dad3;\

@@ -27,15 +27,16 @@
 
 #include "smpp34.h"
 #include "smpp34_structs.h"
+#include "smpp34_heap.h"
 
 int 
 build_udad( udad_t **dest, udad_t *source )
 {
 
     /* Build new DAD-Chain ************************************************/
-    udad_t *dummy = (udad_t*)malloc(sizeof( udad_t ));
+    udad_t *dummy = (udad_t*)smpp34_malloc(sizeof( udad_t ));
     if( dummy == NULL ){
-        printf("Error in malloc()\n" );
+        printf("Error in smpp34_malloc()\n" );
         return( -1 );
     };
     memcpy(dummy, source, sizeof( udad_t ));
@@ -54,7 +55,7 @@ destroy_udad( udad_t *sourceList )
     /* Destroy DAD-Chain **************************************************/
     while( sourceList != NULL ){
         i = sourceList->next;
-        free((void*)sourceList);
+        smpp34_free((void*)sourceList);
         sourceList = i;
     };
 
@@ -68,9 +69,9 @@ build_dad( dad_t **dest, dad_t *source )
 {
 
     /* Build new DAD-Chain ************************************************/
-    dad_t *dummy = (dad_t*)malloc(sizeof( dad_t ));
+    dad_t *dummy = (dad_t*)smpp34_malloc(sizeof( dad_t ));
     if( dummy == NULL ){
-        printf("Error in malloc()\n" );
+        printf("Error in smpp34_malloc()\n" );
         return( -1 );
     };
     memcpy(dummy, source, sizeof( dad_t ));
@@ -89,7 +90,7 @@ destroy_dad( dad_t *sourceList )
     /* Destroy DAD-Chain **************************************************/
     while( sourceList != NULL ){
         i = sourceList->next;
-        free((void*)sourceList);
+        smpp34_free((void*)sourceList);
         sourceList = i;
     };
 
@@ -102,9 +103,9 @@ build_tlv( tlv_t **dest, tlv_t *source )
 {
 
     /* Build new TLV-Chain ************************************************/
-    tlv_t *dummy = (tlv_t*)malloc(sizeof( tlv_t ));
+    tlv_t *dummy = (tlv_t*)smpp34_malloc(sizeof( tlv_t ));
     if( dummy == NULL ){
-        printf("Error in malloc()\n" );
+        printf("Error in smpp34_malloc()\n" );
         return( -1 );
     };
     memcpy(dummy, source, sizeof( tlv_t ));
@@ -123,7 +124,7 @@ destroy_tlv( tlv_t *sourceList )
     /* Destroy TLV-Chain **************************************************/
     while( sourceList != NULL ){
         i = sourceList->next;
-        free((void*)sourceList);
+        smpp34_free((void*)sourceList);
         sourceList = i;
     };
 
