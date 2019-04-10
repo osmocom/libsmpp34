@@ -8,6 +8,9 @@ AC_CONFIG_AUX_DIR(aux_config)
 AM_INIT_AUTOMAKE([foreign])
 AM_CONFIG_HEADER([aux_config/config.h])
 
+dnl kernel style compile messages
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
+
 dnl include release helper
 RELMAKE='-include osmo-release.mk'
 AC_SUBST([RELMAKE])
