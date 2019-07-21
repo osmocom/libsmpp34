@@ -53,7 +53,7 @@ main( int argc, char *argv[] )
     snprintf((char*)b.system_id, sizeof(b.system_id), "%s", "system_id");
     snprintf((char*)b.password, sizeof(b.password), "%s", "pass");
     snprintf((char*)b.system_type, sizeof(b.system_type), "%s", "syste");
-    b.addr_ton    = 0x34;
+    b.interface_version = 0x34;
     b.addr_ton    = 2;
     b.addr_npi    = 1;
     snprintf((char*)b.address_range, sizeof(b.address_range), "%s", "address_range");
