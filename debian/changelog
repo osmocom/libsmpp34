@@ -1,3 +1,26 @@
+libsmpp34 (1.14.0) unstable; urgency=medium
+
+  [ Pau Espin Pedrol ]
+  * debian/rules: Don't overwrite .tarball-version
+
+  [ Neels Hofmeyr ]
+  * esme.c: mark switch statement fall-thru for coverity
+
+  [ Stefan Sperling ]
+  * fix use of partly initialized struct in tcp test
+
+  [ Vadim Yanitskiy ]
+  * configure.ac: enable kernel style compile messages
+
+  [ Harald Welte ]
+  * Allow application to override default heap allocator
+  * bind_receiver_test: Fix "unused value" of writing addr_ton twice
+
+  [ Oliver Smith ]
+  * contrib/jenkins.sh: run "make maintainer-clean"
+
+ -- Pau Espin Pedrol <pespin@sysmocom.de>  Wed, 07 Aug 2019 14:48:06 +0200
+
 libsmpp34 (1.13.0) unstable; urgency=medium
 
   [ Holger Hans Peter Freyther ]
