@@ -21,6 +21,11 @@ AM_PROG_CC_C_O
 AC_PROG_LIBTOOL
 AC_PROG_INSTALL
 
+dnl patching ${archive_cmds} to affect generation of file "libtool" to fix linking with clang 
+AS_CASE(["$LD"],[*clang*],
+  [AS_CASE(["${host_os}"],
+     [*linux*],[archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname -o $lib'])])
+
 # check for pkg-config (explained in detail in libosmocore/configure.ac)
 AC_PATH_PROG(PKG_CONFIG_INSTALLED, pkg-config, no)
 if test "x$PKG_CONFIG_INSTALLED" = "xno"; then
