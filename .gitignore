@@ -19,3 +19,5 @@ debian/autoreconf*
 debian/tmp
 debian/*.log
 debian/*.substvars
+
+contrib/libsmpp34.spec

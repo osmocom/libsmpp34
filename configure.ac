@@ -87,4 +87,5 @@ AC_OUTPUT([Makefile
            def_list/Makefile
            binaries/Makefile
            test_apps/Makefile
-	   libsmpp34.pc])
+	   libsmpp34.pc
+	   contrib/libsmpp34.spec])
