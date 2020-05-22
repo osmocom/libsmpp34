@@ -18,7 +18,9 @@ EXTRA_DIST = src/Makefile.am\
              test_apps/sendwp.xml\
              test_apps/recv_and_unpack.inc \
              README.md \
-             .version
+             .version \
+             debian \
+             contrib/libsmpp34.spec.in
 
 @RELMAKE@
 
