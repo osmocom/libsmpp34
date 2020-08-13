@@ -1,5 +1,5 @@
 Source: libsmpp34
-Maintainer: Holger Freyther <holger@moiji-mobile.com>
+Maintainer: Osmocom team <openbsc@lists.osmocom.org>
 Section: libs
 Priority: optional
 Build-Depends: debhelper (>= 9),
