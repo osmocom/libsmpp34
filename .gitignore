@@ -3,6 +3,7 @@ Makefile.in
 autom4te.cache
 aux_config
 .*.swp
+*~
 configure
 INSTALL
 Makefile
