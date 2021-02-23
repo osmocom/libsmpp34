@@ -1,3 +1,21 @@
+libsmpp34 (1.14.1) unstable; urgency=medium
+
+  [ Eric ]
+  * configure.ac: fix libtool issue  with clang and sanitizer
+
+  [ Oliver Smith ]
+  * contrib: import RPM spec
+  * contrib: integrate RPM spec
+  * Makefile.am: EXTRA_DIST: debian, contrib/*.spec.in
+
+  [ Vadim Yanitskiy ]
+  * debian/control: change maintainer to the Osmocom team / mailing list
+
+  [ Pau Espin Pedrol ]
+  * .gitignore: Ignore new autofoo tmp files
+
+ -- Pau Espin Pedrol <pespin@sysmocom.de>  Tue, 23 Feb 2021 18:00:48 +0100
+
 libsmpp34 (1.14.0) unstable; urgency=medium
 
   [ Pau Espin Pedrol ]
