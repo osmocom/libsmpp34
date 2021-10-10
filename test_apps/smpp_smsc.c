@@ -498,7 +498,7 @@ dead_socket:
 }
 
 /* call-back of write queue once it wishes to write a message to the socket */
-static void esme_link_write_cb(struct osmo_fd *ofd, struct msgb *msg)
+static int esme_link_write_cb(struct osmo_fd *ofd, struct msgb *msg)
 {
 	struct osmo_esme *esme = ofd->data;
 	int rc;
@@ -511,8 +511,10 @@ static void esme_link_write_cb(struct osmo_fd *ofd, struct msgb *msg)
 		smpp_esme_put(esme);
 	} else if (rc < msgb_length(msg)) {
 		LOGP(DSMPP, LOGL_ERROR, "%s: Short write\n", esme->system_id);
-		return;
+		return -1;
 	}
+
+	return 0;
 }
 
 /* callback for already-accepted new TCP socket */

@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 	struct smsc *smsc = talloc_zero(NULL, struct smsc);
 	int rc;
 
-	osmo_init_logging(&log_info);
+	osmo_init_logging2(smsc, &log_info);
 
 	strcpy(smsc->system_id, "OpenBSC");
 	rc = smpp_smsc_init(smsc, 6080);
