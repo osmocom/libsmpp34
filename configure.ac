@@ -6,7 +6,8 @@ AC_INIT(libsmpp34, m4_esyscmd([./git-version-gen .tarball-version]), ultraismo@y
 
 AC_CONFIG_AUX_DIR(aux_config)
 AM_INIT_AUTOMAKE([foreign])
-AM_CONFIG_HEADER([aux_config/config.h])
+AC_CONFIG_HEADERS([aux_config/config.h])
+AC_CONFIG_MACRO_DIRS([m4])
 
 dnl kernel style compile messages
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
@@ -18,8 +19,8 @@ AC_SUBST([RELMAKE])
 # Checks for programs.
 AC_PROG_CC
 AM_PROG_CC_C_O
-AC_PROG_LIBTOOL
 AC_PROG_INSTALL
+LT_INIT
 
 dnl patching ${archive_cmds} to affect generation of file "libtool" to fix linking with clang 
 AS_CASE(["$LD"],[*clang*],
@@ -82,10 +83,11 @@ fi
 AC_MSG_RESULT([CFLAGS="$CFLAGS"])
 AC_MSG_RESULT([CPPFLAGS="$CPPFLAGS"])
 
-AC_OUTPUT([Makefile
-           def_frame/Makefile
-           def_list/Makefile
-           binaries/Makefile
-           test_apps/Makefile
-	   libsmpp34.pc
-	   contrib/libsmpp34.spec])
+AC_CONFIG_FILES([Makefile
+		 def_frame/Makefile
+		 def_list/Makefile
+		 binaries/Makefile
+		 test_apps/Makefile
+		 libsmpp34.pc
+		 contrib/libsmpp34.spec])
+AC_OUTPUT

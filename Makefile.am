@@ -1,3 +1,5 @@
+ACLOCAL_AMFLAGS = -I m4
+
 SUBDIRS = binaries def_frame def_list
 
 if HAVE_LIBXML2
