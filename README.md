@@ -24,9 +24,9 @@ GIT Repository
 
 You can clone from the Osmocom libsmpp34.git repository using
 
-	git clone git://git.osmocom.org/libsmpp34.git
+	git clone https://gitea.osmocom.org/cellular-infrastructure/libsmpp34
 
-There is a cgit interface at <http://git.osmocom.org/libsmpp34/>
+There is a web interface at <https://gitea.osmocom.org/cellular-infrastructure/libsmpp34>
 
 Documentation
 -------------
