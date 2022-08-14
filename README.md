@@ -58,5 +58,5 @@ contributions.  Please see
 <https://osmocom.org/projects/cellular-infrastructure/wiki/Gerrit> for
 more details
 
-The current patch queue for libosmocore can be seen at
+The current patch queue for libsmpp34 can be seen at
 <https://gerrit.osmocom.org/#/q/project:libsmpp34+status:open>
