@@ -7,7 +7,6 @@ osmo-clean-workspace.sh
 
 autoreconf --install --force
 ./configure --enable-sanitize --enable-werror
-$MAKE
 $MAKE $PARALLEL_MAKE
 $MAKE distcheck || cat-testlogs.sh
 $MAKE maintainer-clean
