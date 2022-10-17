@@ -1,23 +1,22 @@
-/* 
+/*
  * Copyright (C) 2006 Raul Tremsal
  * File  : smpp34.h
  * Author: Raul Tremsal <ultraismo@yahoo.com>
  *
  * This file is part of libsmpp34 (c-open-smpp3.4 library).
  *
- * The libsmpp34 library is free software; you can redistribute it and/or 
- * modify it under the terms of the GNU Lesser General Public License as 
- * published by the Free Software Foundation; either version 2.1 of the 
+ * The libsmpp34 library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of the
  * License, or (at your option) any later version.
  *
- * This library is distributed in the hope that it will be useful, but 
- * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY 
- * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public 
+ * This library is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public
  * License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public License 
- * along with this library; if not, write to the Free Software Foundation, 
- * Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this library; if not, see <http://www.gnu.org/licenses/>.
  *
  */
 #ifndef _SMPP_H_
@@ -26,41 +25,41 @@
 /* SMPP Version ***************************************************************/
 #define SMPP_VERSION 0x34
 /* Command Id *****************************************************************/
-#define GENERIC_NACK 0x80000000 
-#define BIND_RECEIVER 0x00000001 
-#define BIND_RECEIVER_RESP 0x80000001 
-#define BIND_TRANSMITTER 0x00000002 
-#define BIND_TRANSMITTER_RESP 0x80000002 
-#define QUERY_SM 0x00000003 
-#define QUERY_SM_RESP 0x80000003 
-#define SUBMIT_SM 0x00000004 
-#define SUBMIT_SM_RESP 0x80000004 
-#define DELIVER_SM 0x00000005 
-#define DELIVER_SM_RESP 0x80000005 
-#define UNBIND 0x00000006 
-#define UNBIND_RESP 0x80000006 
-#define REPLACE_SM 0x00000007 
-#define REPLACE_SM_RESP 0x80000007 
-#define CANCEL_SM 0x00000008 
-#define CANCEL_SM_RESP 0x80000008 
-#define BIND_TRANSCEIVER 0x00000009 
-#define BIND_TRANSCEIVER_RESP 0x80000009 
+#define GENERIC_NACK 0x80000000
+#define BIND_RECEIVER 0x00000001
+#define BIND_RECEIVER_RESP 0x80000001
+#define BIND_TRANSMITTER 0x00000002
+#define BIND_TRANSMITTER_RESP 0x80000002
+#define QUERY_SM 0x00000003
+#define QUERY_SM_RESP 0x80000003
+#define SUBMIT_SM 0x00000004
+#define SUBMIT_SM_RESP 0x80000004
+#define DELIVER_SM 0x00000005
+#define DELIVER_SM_RESP 0x80000005
+#define UNBIND 0x00000006
+#define UNBIND_RESP 0x80000006
+#define REPLACE_SM 0x00000007
+#define REPLACE_SM_RESP 0x80000007
+#define CANCEL_SM 0x00000008
+#define CANCEL_SM_RESP 0x80000008
+#define BIND_TRANSCEIVER 0x00000009
+#define BIND_TRANSCEIVER_RESP 0x80000009
 /* Reserved 0x0000000A 0x8000000A */
-#define OUTBIND 0x0000000B 
+#define OUTBIND 0x0000000B
 /* Reserved 0x0000000C - 0x00000014 0x8000000B - 0x80000014 */
-#define ENQUIRE_LINK 0x00000015 
-#define ENQUIRE_LINK_RESP 0x80000015 
+#define ENQUIRE_LINK 0x00000015
+#define ENQUIRE_LINK_RESP 0x80000015
 /* Reserved 0x00000016 - 0x00000020 0x80000016 - 0x80000020*/
-#define SUBMIT_MULTI 0x00000021 
-#define SUBMIT_MULTI_RESP 0x80000021 
+#define SUBMIT_MULTI 0x00000021
+#define SUBMIT_MULTI_RESP 0x80000021
 /* Reserved 0x00000022 - 0x000000FF 0x80000022 - 0x800000FF */
 /* Reserved 0x00000100 */
-#define Reserved 0x80000100 
+#define Reserved 0x80000100
 /* Reserved 0x00000101 0x80000101 */
-#define ALERT_NOTIFICATION 0x00000102 
+#define ALERT_NOTIFICATION 0x00000102
 /* Reserved 0x80000102 */
-#define DATA_SM 0x00000103 
-#define DATA_SM_RESP 0x80000103 
+#define DATA_SM 0x00000103
+#define DATA_SM_RESP 0x80000103
 /* Reserved for SMPP extension 0x00000104 - 0x0000FFFF 0x80000104 - 0x8000FFFF */
 /* Reserved 0x00010000 - 0x000101FF 0x80010000 - 0x800101FF */
 /* Reserved for SMSC Vendor 0x00010200 - 0x000102FF 0x80010200 - 0x800102FF */
