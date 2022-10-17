@@ -24,6 +24,7 @@
 
 /* SMPP Version ***************************************************************/
 #define SMPP_VERSION 0x34
+#define SMPP_PORT 2775
 /* Command Id *****************************************************************/
 #define GENERIC_NACK 0x80000000
 #define BIND_RECEIVER 0x00000001
