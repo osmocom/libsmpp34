@@ -1,3 +1,21 @@
+libsmpp34 (1.14.2) unstable; urgency=medium
+
+  [ Vadim Yanitskiy ]
+  * README.md: fix copy-paste: s/libosmocore/libsmpp34/
+  * update git URLs (git -> https; gitea)
+  * Makefile.am, configure.ac: fix autoreconf related warnings
+  * contrib/jenkins.sh: actually build with $PARALLEL_MAKE
+
+  [ Max ]
+  * cosmetic: make linter happy
+  * Add #define for default SMPP port 2775
+
+  [ Harald Welte ]
+  * test_apps: Fix compilation of example smsc code
+  * Add -Werror=implicit-int -Werror=int-conversion -Werror=old-style-definition
+
+ -- Pau Espin Pedrol <pespin@sysmocom.de>  Tue, 07 Feb 2023 14:28:28 +0100
+
 libsmpp34 (1.14.1) unstable; urgency=medium
 
   [ Eric ]
