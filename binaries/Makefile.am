@@ -9,9 +9,8 @@ include $(top_srcdir)/test_pdu/Makefile.am
 include $(top_srcdir)/test_apps/Makefile.am
 include $(top_srcdir)/src/Makefile.am
 
-LDADD = libsmpp34.la
+LDADD = libsmpp34.la -lrt -lpthread
 AM_CPPFLAGS = -D_REENTRANT -DBSD_COMP -D_POSIX_PTHREAD_SEMANTICS
 AM_CFLAGS = @CFLAGS@ -Wall -fPIC # -static
 INCLUDES = -I$(top_srcdir)/src -I$(top_srcdir)
-AM_LDFLAGS = -lrt -lpthread
 OBJ_EXTRA_DIST = $(esme_EXTRA_DIST)
