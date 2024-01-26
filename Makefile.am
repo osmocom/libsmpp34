@@ -22,7 +22,9 @@ EXTRA_DIST = src/Makefile.am\
              README.md \
              .version \
              debian \
-             contrib/libsmpp34.spec.in
+             contrib/libsmpp34.spec.in \
+             git-version-gen \
+             $(NULL)
 
 @RELMAKE@
 
