@@ -89,6 +89,5 @@ AC_CONFIG_FILES([Makefile
 		 def_list/Makefile
 		 binaries/Makefile
 		 test_apps/Makefile
-		 libsmpp34.pc
-		 contrib/libsmpp34.spec])
+		 libsmpp34.pc])
 AC_OUTPUT
