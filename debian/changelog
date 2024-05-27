@@ -1,3 +1,14 @@
+libsmpp34 (1.14.4) unstable; urgency=medium
+
+  [ Vadim Yanitskiy ]
+  * fix warnings about implicit declaration of strtol()
+  * build: include git-version-gen into the release tarball
+
+  [ Oliver Smith ]
+  * contrib: remove rpm spec file
+
+ -- Oliver Smith <osmith@sysmocom.de>  Mon, 27 May 2024 11:16:01 +0200
+
 libsmpp34 (1.14.3) unstable; urgency=medium
 
   [ Vadim Yanitskiy ]

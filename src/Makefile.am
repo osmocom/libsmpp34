@@ -1,6 +1,6 @@
 # This is _NOT_ the library release version, it's an API version.
 # Please read Chapter 6 "Library interface versions" of the libtool documentation before making any modification
-LIBVERSION=3:0:2
+LIBVERSION=3:1:2
 
 # src/Makefile.am #
 lib_LTLIBRARIES = libsmpp34.la
