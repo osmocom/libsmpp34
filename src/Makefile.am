@@ -18,11 +18,25 @@ libsmpp34_la_SOURCES = \
     $(LIBRARY_SOURCE_DIR)/smpp34_params.c \
     $(LIBRARY_SOURCE_DIR)/smpp34_params.h
 
+smpp34_version.h: $(LIBRARY_SOURCE_DIR)/smpp34_version.h.tpl
+	$(AM_V_GEN)sed \
+		-e "s/{{VERSION}}/$$(echo '@VERSION@' | cut -d. -f1-3)/g" \
+		-e "s/{{VERSION_MAJOR}}/$$(echo '@VERSION@' | cut -d. -f1)/g" \
+		-e "s/{{VERSION_MINOR}}/$$(echo '@VERSION@' | cut -d. -f2)/g" \
+		-e "s/{{VERSION_PATCH}}/$$(echo '@VERSION@' | cut -d. -f3)/g" \
+		$< > $@
+
+EXTRA_DIST = \
+	$(LIBRARY_SOURCE_DIR)/smpp34_version.h.tpl \
+	$(NULL)
+
 include_HEADERS = \
     $(LIBRARY_SOURCE_DIR)/smpp34.h \
     $(LIBRARY_SOURCE_DIR)/smpp34_heap.h \
     $(LIBRARY_SOURCE_DIR)/smpp34_structs.h \
-    $(LIBRARY_SOURCE_DIR)/smpp34_params.h
+    $(LIBRARY_SOURCE_DIR)/smpp34_params.h \
+    smpp34_version.h \
+    $(NULL)
 
 libsmpp34_la_CFLAGS = @CFLAGS@ -Wall
 libsmpp34_la_CFLAGS += -D_REENTRANT -DBSD_COMP -D_POSIX_PTHREAD_SEMANTICS
